@@ -65,6 +65,7 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\属性配置\PCL1.9\pcl1.9.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -103,7 +104,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
+      <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
@@ -151,7 +152,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="enLargePoint.cpp" />
+    <ClCompile Include="fillPoint.cpp" />
+    <ClCompile Include="intPoint.cpp" />
+    <ClCompile Include="MyDownSample.cpp" />
+    <ClCompile Include="MyreadPly.cpp" />
     <ClCompile Include="MyVPCC.cpp" />
+    <ClCompile Include="myWritePly.cpp" />
+    <ClCompile Include="reducePoint.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="enLargePoint.h" />
+    <ClInclude Include="fillPoint.h" />
+    <ClInclude Include="intPoint.h" />
+    <ClInclude Include="MyDownSample.h" />
+    <ClInclude Include="MyVpcc.h" />
+    <ClInclude Include="myWritePly.h" />
+    <ClInclude Include="reducePoint.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

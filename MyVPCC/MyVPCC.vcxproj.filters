@@ -13,10 +13,60 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\Cpp">
+      <UniqueIdentifier>{49a64d68-96d5-408d-8231-b8d0c9eb20ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Hpp">
+      <UniqueIdentifier>{2b404c5a-7041-49fc-acc5-87aa1ebb468d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyVPCC.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="MyreadPly.cpp">
+      <Filter>源文件\Cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="myWritePly.cpp">
+      <Filter>源文件\Cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="MyDownSample.cpp">
+      <Filter>源文件\Cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="reducePoint.cpp">
+      <Filter>源文件\Cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="intPoint.cpp">
+      <Filter>源文件\Cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="enLargePoint.cpp">
+      <Filter>源文件\Cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="fillPoint.cpp">
+      <Filter>源文件\Cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyVpcc.h">
+      <Filter>源文件\Hpp</Filter>
+    </ClInclude>
+    <ClInclude Include="myWritePly.h">
+      <Filter>源文件\Hpp</Filter>
+    </ClInclude>
+    <ClInclude Include="MyDownSample.h">
+      <Filter>源文件\Hpp</Filter>
+    </ClInclude>
+    <ClInclude Include="reducePoint.h">
+      <Filter>源文件\Hpp</Filter>
+    </ClInclude>
+    <ClInclude Include="intPoint.h">
+      <Filter>源文件\Hpp</Filter>
+    </ClInclude>
+    <ClInclude Include="enLargePoint.h">
+      <Filter>源文件\Hpp</Filter>
+    </ClInclude>
+    <ClInclude Include="fillPoint.h">
+      <Filter>源文件\Hpp</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

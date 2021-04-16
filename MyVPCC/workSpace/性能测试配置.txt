@@ -1,0 +1,71 @@
+PccAppQualityMetric.exe -a 1.ply -b rec1.ply -r 1023 --dropdups=2 --neighborsProc=1 -d
+ ./PccAppQualityMetric -a a.ply -b r.ply -c -r 1023 -d -n n.ply
+1.原始模式的结果
+ PS F:\VisualStudio17\PccAppQualityMetric\PAQM\PccAppQualityMetric\x64\Release> .\PccAppQualityMetric.exe -a longdress_vox10_1051.ply -b S26C03R03_rec_1051.ply -r 1023 --dropdups=2 --neighborsProc=1 -d
+PCC quality measurement software, version 0.12
+
+infile1: longdress_vox10_1051.ply
+infile2: S26C03R03_rec_1051.ply
+normal1:
+
+Verifying if the data is loaded correctly.. The last point is: 320 906 144
+Reading file 1 done.
+WARNING: 16829 points with same coordinates found and averaged
+Verifying if the data is loaded correctly.. The last point is: 254 941 110
+Reading file 2 done.
+Imported intrinsic resoluiton: 1023
+Peak distance for PSNR: 1023
+Point cloud sizes for org version, dec version, and the scaling ratio: 765821, 737253, 0.962696
+Normals prepared.
+
+1. Use infile1 (A) as reference, loop over A, use normals on B. (A->B).
+   mse1      (p2point): 0.361882
+   mse1,PSNR (p2point): 69.3831
+   h.       1(p2point): 59
+   h.,PSNR  1(p2point): 47.2602
+2. Use infile2 (B) as reference, loop over B, use normals on A. (B->A).
+   mse2      (p2point): 0.341439
+   mse2,PSNR (p2point): 69.6356
+   h.       2(p2point): 53
+   h.,PSNR  2(p2point): 47.726
+3. Final (symmetric).
+   mseF      (p2point): 0.361882
+   mseF,PSNR (p2point): 69.3831
+   h.        (p2point): 59
+   h.,PSNR   (p2point): 47.2602
+Job done! 7.219 seconds elapsed (excluding the time to load the point clouds).
+PS F:\VisualStudio17\PccAppQualityMetric\PAQM\PccAppQualityMetric\x64\Release>
+2.不使用分割细化得到的结果
+PS F:\VisualStudio17\PccAppQualityMetric\PAQM\PccAppQualityMetric\x64\Release> .\PccAppQualityMetric.exe -a longdress_vox10_1051.ply -b S26C03R03_rec_1051.ply -r 1023 --dropdups=2 --neighborsProc=1 -d
+PCC quality measurement software, version 0.12
+
+infile1: longdress_vox10_1051.ply
+infile2: S26C03R03_rec_1051.ply
+normal1:
+
+Verifying if the data is loaded correctly.. The last point is: 320 906 144
+Reading file 1 done.
+WARNING: 60863 points with same coordinates found and averaged
+Verifying if the data is loaded correctly.. The last point is: 292 363 121
+Reading file 2 done.
+Imported intrinsic resoluiton: 1023
+Peak distance for PSNR: 1023
+Point cloud sizes for org version, dec version, and the scaling ratio: 765821, 753212, 0.983535
+Normals prepared.
+
+1. Use infile1 (A) as reference, loop over A, use normals on B. (A->B).
+   mse1      (p2point): 0.328155
+   mse1,PSNR (p2point): 69.8079
+   h.       1(p2point): 18
+   h.,PSNR  1(p2point): 52.416
+2. Use infile2 (B) as reference, loop over B, use normals on A. (B->A).
+   mse2      (p2point): 0.341065
+   mse2,PSNR (p2point): 69.6404
+   h.       2(p2point): 38
+   h.,PSNR  2(p2point): 49.1709
+3. Final (symmetric).
+   mseF      (p2point): 0.341065
+   mseF,PSNR (p2point): 69.6404
+   h.        (p2point): 38
+   h.,PSNR   (p2point): 49.1709
+Job done! 2.64 seconds elapsed (excluding the time to load the point clouds).
